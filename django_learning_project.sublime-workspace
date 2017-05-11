@@ -1,0 +1,236 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"po",
+				"post_home"
+			],
+			[
+				"post",
+				"posts"
+			],
+			[
+				"ti",
+				"timestamp"
+			],
+			[
+				"P",
+				"PostModelAdmin"
+			],
+			[
+				"ev",
+				"evaluate"
+			],
+			[
+				"as",
+				"ask_opinion_for_others_artifact"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"a",
+				"artifact"
+			],
+			[
+				"en",
+				"environment"
+			],
+			[
+				"mu",
+				"mutation_candidate_artifact"
+			],
+			[
+				"pu",
+				"publisher_agent_number_in_env"
+			],
+			[
+				"de",
+				"debug"
+			],
+			[
+				"ag",
+				"agent_number_in_env"
+			],
+			[
+				"Muta",
+				"mutation_candidate_artifact"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"mutation",
+				"mutation_candidate"
+			],
+			[
+				"mut",
+				"mutation_candidate"
+			],
+			[
+				"get",
+				"get_artifact_service"
+			],
+			[
+				"ex",
+				"exposing_artifact"
+			],
+			[
+				"re",
+				"return"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/adnanbajwa/PycharmProjects/DjangoDevelopment/venv/requirements.txt",
+		"/Users/adnanbajwa/PycharmProjects/DjangoDevelopment/venv/src/crud.md",
+		"/Users/adnanbajwa/PycharmProjects/DjangoDevelopment/venv/src/django_project/settings.py",
+		"/Users/adnanbajwa/PycharmProjects/DjangoDevelopment/venv/src/posts/migrations/0001_initial.py",
+		"/Users/adnanbajwa/PycharmProjects/DjangoDevelopment/venv/src/manage.py",
+		"/Users/adnanbajwa/PycharmProjects/DjangoDevelopment/venv/src/posts/admin.py",
+		"/Users/adnanbajwa/Downloads/Bdata last/TableJoinHadoop/NameHobbyMain.java",
+		"/Users/adnanbajwa/Desktop/output",
+		"/Users/adnanbajwa/Desktop/less_trafi_boats_data",
+		"/Users/adnanbajwa/Downloads/test.R",
+		"/Users/adnanbajwa/PycharmProjects/AMLWeek2/014601275.py",
+		"/Users/adnanbajwa/tizenworkspace/Providert/src/helloaccessory.c",
+		"/Users/adnanbajwa/tizenworkspace/Providert/inc/helloaccessory.h",
+		"/Users/adnanbajwa/tizenworkspace/Provider/inc/provider.h",
+		"/Users/adnanbajwa/Documents/androidstudioworkspace/GearFitApplication/mobile/src/androidTest/java/net/epicsol/www/gearfitapplication/ApplicationTest.java",
+		"/Users/adnanbajwa/Desktop/ML Assgn/Final/014601275 2/014601275.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"jumbotron text-center",
+			"self.mem",
+			"plot",
+			"degre"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 298.0,
+	"status_bar_visible": true
+}
