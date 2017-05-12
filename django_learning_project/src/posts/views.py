@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
+from .models import Post
+
 def post_create(request):
 	return HttpResponse("<h1>Create</h1>")
 
@@ -13,7 +15,10 @@ def post_detail(request): #retrieve
 	return render(request, "index.html", context)
 
 def post_list(request): #list items
+
+	queryset = Post.objects.all()
 	context  = {
+		"queryset":queryset,
 		"title" : "List"
 	}		
 	

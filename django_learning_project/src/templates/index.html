@@ -4,5 +4,13 @@
 </head>
 <body>
 	<h1>{{title}} is working.</h1>
+	<p>
+		{% for obj in queryset %}
+			{{obj.title}}<br/>
+			{{obj.content}}<br/>
+			{{obj.timestamp}}<br/>
+			{{obj.udpate}}<br/>
+		{% endfor %}
+	</p>
 </body>
 </html>
