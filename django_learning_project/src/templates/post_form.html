@@ -1,12 +1,6 @@
-<!-- DOCTYPE HTML -->
-<html>
-	<head>
-	</head>
-	<body>
-		<H1>Form</h1>
-			<form method='POST' action=''>{% csrf_token %}
-				{{form.as_p}}
-				<input type='submit' value = 'create Post'>
-			</form>
-	</body>
-</html>
+{% extends "base.html" %} {% block content %}
+<H1>Form</h1>
+<form method='POST' action=''>{% csrf_token %} {{form.as_p}}
+    <input type='submit' value='create Post'>
+</form>
+{% endblock content %}
