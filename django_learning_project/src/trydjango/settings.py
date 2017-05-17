@@ -119,3 +119,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+"""
+Not saving CDN folders in venv folder but it works
+
+Static.cdn -> static content delivery network, as if emulating static files from different server.
+os.path.dirname(BASE_DIR) -> one folder up from BASE_DIR
+
+Command -> python manage.py collectstatic (Collect all static files into static_cdn)
+"""
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn") 
+
+
+# Use to save uploaded media by users 
+
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn") 
