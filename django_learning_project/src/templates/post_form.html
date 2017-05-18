@@ -1,6 +1,8 @@
 {% extends "base.html" %} {% block content %}
-<H1>Form</h1>
-<form method='POST' action=''>{% csrf_token %} {{form.as_p}}
-    <input type='submit' value='create Post'>
-</form>
+<div class="col-sm-6 col-md-offset-3">
+    <H1>Form</h1>
+    <form method='POST' action=''>{% csrf_token %} {{form.as_p}}
+        <input type='submit' value='create Post'>
+    </form>
+</div>
 {% endblock content %}
