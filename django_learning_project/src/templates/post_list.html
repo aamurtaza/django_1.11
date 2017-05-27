@@ -19,13 +19,13 @@
     <div class="pagination">
         <span class="step-links">
         {% if queryset.has_previous %}
-            <a href="?page={{ queryset.previous_page_number }}">previous</a>
+            <a href="?{{ page_request_var }}={{ queryset.previous_page_number }}">previous</a>
         {% endif %}
 
         <span class="current">
             Page {{ queryset.number }} of {{ queryset.paginator.num_pages }}.
         </span> {% if queryset.has_next %}
-        <a href="?page={{ queryset.next_page_number }}">next</a> {% endif %}
+        <a href="?{{ page_request_var }}={{ queryset.next_page_number }}">next</a> {% endif %}
         </span>
     </div>
 </div>
