@@ -20,3 +20,7 @@ class Post(models.Model):
 
 	def get_absolute_url(self):
 		return reverse("posts:detail", kwargs={"id": self.id})
+
+	class Meta:
+		# In views adding order_by.('-timestamp') also performs the same but its good to add ordering in Meta class.
+		ordering = ['-timestamp', '-updated']
