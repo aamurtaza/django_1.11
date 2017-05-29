@@ -1,7 +1,9 @@
 from __future__ import unicode_literals
 
-from django.db import models
 from django.core.urlresolvers import reverse
+from django.db import models
+from django.db.models.signals import pre_save
+from django.utils.text import slugify
 
 # Create your models here.
 # MVC MODEL VIEW CONTROLLER
@@ -40,3 +42,13 @@ class Post(models.Model):
         # In views adding order_by.('-timestamp') also performs the same but
         # its good to add ordering in Meta class.
         ordering = ['-timestamp', '-updated']
+
+def pre_save_post_receiver(sender, instance, *args, **kwargs):
+    #boat in sea = boat-in-sea
+    slug = slugify(instance.title)
+    exists = Post.objects.filter(slug=slug).exists()
+    if exists:
+        slug = "%s%s" %(slug, instance.id)
+    instance.slug = slug
+
+pre_save.connect(pre_save_post_receiver, sender=Post) 
