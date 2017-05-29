@@ -15,6 +15,7 @@ def upload_image_location(instance, filename):
 
 class Post(models.Model):
     title = models.CharField(max_length=120)
+    slug = models.SlugField(unique=True)
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     image = models.ImageField(
