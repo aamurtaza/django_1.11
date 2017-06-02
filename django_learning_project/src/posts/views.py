@@ -12,10 +12,13 @@ from .models import Post
 def post_create(request):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
+    if not request.user.is_authenticated(): # Handle anonymous user error
+        raise Http404
     # If reuqest also submiting files then adding "request.FIlES" is necessary
     form = PostForm(request.POST or None, request.FILES or None)  
     if form.is_valid():
         instance = form.save(commit=False)
+        instance.user = request.user
         instance.save()
         # message success
         messages.success(request, "Post successfully created")
