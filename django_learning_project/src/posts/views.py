@@ -12,8 +12,8 @@ from .models import Post
 def post_create(request):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
-    if not request.user.is_authenticated(): # Handle anonymous user error
-        raise Http404
+    # if not request.user.is_authenticated(): # handles anonymous user error
+    #     raise Http404
     # If reuqest also submiting files then adding "request.FIlES" is necessary
     form = PostForm(request.POST or None, request.FILES or None)  
     if form.is_valid():
@@ -44,7 +44,7 @@ def post_detail(request, slug=None):
 
 
 def post_list(request):
-    queryset_list = Post.objects.all()
+    queryset_list = Post.objects.active()
     paginator = Paginator(queryset_list, 10) # Show 10 contacts per page
     page_request_var = 'page'
 
