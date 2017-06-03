@@ -1,10 +1,11 @@
 {% extends "base.html" %} {% block content %}
 <div class="col-sm-6 col-md-offset-3">
-    <h1>{{ title }}</h1> {% for obj in queryset %}
+    <h1>{{ title }}</h1> 
     <form action="" method="GET">
         <input type="text" name="q" placeholder="Search Post" value="{{ request.GET.q }}" />
         <input type="submit" value="Search">
     </form>
+    {% for obj in queryset %}
     <div class="row">
         <div class="col-sm-12">
             <div class="thumbnail">

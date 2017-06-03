@@ -1,9 +1,10 @@
-from urllib.parse import quote  
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from urllib.parse import quote 
 
 # Create your views here.
 from .forms import PostForm
@@ -54,7 +55,12 @@ def post_list(request):
 
     query = request.GET.get("q")
     if query:
-        queryset_list = Post.objects.all().filter(title__icontains=query)
+        queryset_list = Post.objects.all().filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query) |
+            Q(user__first_name__icontains=query) |
+            Q(user__last_name__icontains=query) 
+            ).distinct()
 
     paginator = Paginator(queryset_list, 10) # Show 10 contacts per page
     page_request_var = 'page'
