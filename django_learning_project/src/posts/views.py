@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
 
 # Create your views here.
 from .forms import PostForm
@@ -33,6 +34,9 @@ def post_create(request):
 
 def post_detail(request, slug=None):
     instance = get_object_or_404(Post, slug=slug)
+    if instance.draft or instance.publish > timezone.now().date():
+        if not request.user.is_staff or not request.user.is_superuser:
+            raise Http404
     share_string = quote(instance.content)
     context = {
         "title": instance.title,
@@ -45,6 +49,8 @@ def post_detail(request, slug=None):
 
 def post_list(request):
     queryset_list = Post.objects.active()
+    if request.user.is_staff or reuqest.user.is_superuser:
+        queryset_list = Post.objects.all()
     paginator = Paginator(queryset_list, 10) # Show 10 contacts per page
     page_request_var = 'page'
 
