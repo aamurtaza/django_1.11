@@ -51,6 +51,11 @@ def post_list(request):
     queryset_list = Post.objects.active()
     if request.user.is_staff or reuqest.user.is_superuser:
         queryset_list = Post.objects.all()
+
+    query = request.GET.get("q")
+    if query:
+        queryset_list = Post.objects.all().filter(title__icontains=query)
+
     paginator = Paginator(queryset_list, 10) # Show 10 contacts per page
     page_request_var = 'page'
 
